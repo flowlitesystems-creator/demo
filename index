@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlowLite Systems - Demo Final</title>
+    <style>
+        :root { color-scheme: light; }
+        body { 
+            background-color: #ffffff !important; 
+            color: #1a1a1a !important; 
+            font-family: Arial, sans-serif; 
+            margin: 0; padding: 15px;
+        }
+        .container { max-width: 450px; margin: auto; }
+        .header { text-align: center; padding: 10px 0; border-bottom: 1px solid #eee; margin-bottom: 20px; }
+        .header h1 { margin: 0; font-size: 1.5em; color: #333; }
+        .section-title { font-size: 1.1em; font-weight: bold; margin: 20px 0 10px; border-left: 4px solid #1a1a1a; padding-left: 10px; }
+        .beneficios-box { background: #fdfdfd; border: 1px solid #f0f0f0; padding: 15px; border-radius: 10px; font-size: 0.95em; margin-bottom: 30px; }
+        .btn-wrapper { margin-bottom: 10px; }
+        .btn { display: block; width: 100%; padding: 16px; text-align: center; border-radius: 8px; border: none; cursor: pointer; font-size: 1em; font-weight: bold; text-decoration: none; }
+        .btn-black { background: #1a1a1a; color: white; }
+        .btn-orange { background: #ff5722; color: white; }
+        .btn-gray { background: #f4f4f4; color: #333; }
+        .btn-green { background: #25D366; color: white; }
+        .content-deploy { display: none; padding: 15px; background: #fff; border: 1px solid #eee; border-top: none; border-radius: 0 0 8px 8px; margin-bottom: 15px; }
+        .content-deploy img { width: 100%; border-radius: 5px; margin-bottom: 10px; display: block; }
+        .map-box { background: #f9f9f9; padding: 15px; border-radius: 8px; border: 1px dashed #ccc; text-align: center; }
+        .footer { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>FlowLite Systems</h1>
+        <p style="margin:5px 0; color: #666;">DEMO DE CATÁLOGO</p>
+    </div>
+
+    <div class="section-title">POR QUÉ TU NEGOCIO NECESITA QR</div>
+    <div class="beneficios-box">
+        <p>✅ <strong>Maximización de Recompra:</strong> Facilita pedidos recurrentes.</p>
+        <p>✅ <strong>Eliminación de Gastos:</strong> Cero inversión en papelería.</p>
+        <p>✅ <strong>Adiós al PDF:</strong> Carga instantánea sin descargas.</p>
+        <p>✅ <strong>Imagen Profesional:</strong> Marca moderna y tecnológica.</p>
+        <p>✅ <strong>Control de Stock:</strong> Cambia precios en minutos.</p>
+        <p>🚀 <strong>Listo en 24h:</strong> Tu catálogo activo en tiempo récord.</p>
+    </div>
+
+    <div class="section-title">BOTONES (ACCIONES RÁPIDAS)</div>
+
+    <div class="btn-wrapper">
+        <button class="btn btn-black" onclick="toggleContent('cat-main')">CATÁLOGO PRINCIPAL</button>
+        <div id="cat-main" class="content-deploy">
+            <p>Este es un modelo de cómo se verían tus productos:</p>
+            <img src="imagen1.jpg" alt="Ventas 1">
+            <img src="imagen2.jpg" alt="Ventas 2">
+        </div>
+    </div>
+
+    <div class="btn-wrapper">
+        <button class="btn btn-orange" onclick="toggleContent('cat-offer')">OFERTA RELÁMPAGO</button>
+        <div id="cat-offer" class="content-deploy">
+            <img src="imagen3.jpg" alt="Oferta">
+            <p>Destaca promociones exclusivas aquí.</p>
+        </div>
+    </div>
+
+    <div class="btn-wrapper">
+        <button class="btn btn-gray" onclick="toggleContent('cat-loc')">UBICACIÓN</button>
+        <div id="cat-loc" class="content-deploy">
+            <div class="map-box">
+                <p>CALLE ONTARIO 156 - CHORRILLOS</p>
+                <a href="https://maps.google.com" target="_blank" style="color: #1877F2; font-weight: bold;">Ver en Google Maps</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="btn-wrapper">
+        <a href="https://wa.me/51990582170" class="btn btn-green">PEDIR POR WHATSAPP</a>
+    </div>
+
+    <div class="footer">
+        Síguenos en nuestra Fanpage: <a href="https://www.facebook.com/profile.php?id=61582856535665" target="_blank" style="color: #1877F2; text-decoration: none; font-weight: bold;">FlowLite Systems</a>
+    </div>
+</div>
+
+<script>
+    function toggleContent(id) {
+        var content = document.getElementById(id);
+        var all = document.getElementsByClassName("content-deploy");
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            for(var i=0; i<all.length; i++) { all[i].style.display = "none"; }
+            content.style.display = "block";
+        }
+    }
+</script>
+
+</body>
+</html>
